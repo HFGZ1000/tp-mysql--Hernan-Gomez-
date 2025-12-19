@@ -106,55 +106,27 @@ CREATE TABLE historiales_clinicos (
 -- Ejercicio 6 – Insertar registros
 -- Insertar:
 -- ● 3 dueños con información completa
-INSERT INTO
-    duenos (nombre, apellido, telefono, direccion)
-VALUES
-    ('Juan', 'Pérez', '123456789', 'Calle Falsa 123'),
-    (
-        'Ana',
-        'Gómez',
-        '987654321',
-        'Avenida Siempre Viva 742'
-    ),
-    (
-        'Luis',
-        'Martínez',
-        '456789123',
-        'Boulevard de los Sueños 456'
-    );
+INSERT INTO duenos (nombre, apellido, telefono, direccion)
+VALUES ('Juan', 'Pérez', '123456789', 'Calle Falsa 123'),
+       ('Ana', 'Gómez', '987654321', 'Avenida Siempre Viva 742'),
+       ('Luis', 'Martínez', '456789123', 'Boulevard de los Sueños 456');
 
 -- ● 3 mascotas, cada una asociada a un dueño
-INSERT INTO
-    mascotas (nombre, especie, fecha_nacimiento, id_dueno)
-VALUES
-    ('Firulais', 'Perro', '2018-05-01', 1),
-    ('Miau', 'Gato', '2020-08-15', 2),
-    ('Pajarito', 'Ave', '2019-11-30', 3);
+INSERT INTO mascotas (nombre, especie, fecha_nacimiento, id_dueno)
+VALUES ('Firulais', 'Perro', '2018-05-01', 1),
+       ('Miau', 'Gato', '2020-08-15', 2),
+       ('Pajarito', 'Ave', '2019-11-30', 3);
 
 -- ● 2 veterinarios con especialidades distintas
-INSERT INTO
-    veterinarios (nombre, apellido, matricula, especialidad)
-VALUES
-    ('Dr. Carlos', 'López', 'VET001', 'Cirugía'),
-    (
-        'Dra. María',
-        'Fernández',
-        'VET002',
-        'Dermatología'
-    );
+INSERT INTO veterinarios (nombre, apellido, matricula, especialidad)
+VALUES ('Dr. Carlos', 'López', 'VET001', 'Cirugía'),
+       ('Dra. María', 'Fernández', 'VET002', 'Dermatología');
 
 -- ● 3 registros de historial clínico
-INSERT INTO
-    historiales_clinicos (
-        fecha_registro,
-        descripcion,
-        id_mascota,
-        id_veterinario
-    )
-VALUES
-    (NOW(), 'Consulta por alergias', 1, 1),
-    (NOW(), 'Revisión anual', 2, 2),
-    (NOW(), 'Vacunación', 3, 1);
+INSERT INTO historiales_clinicos (fecha_registro, descripcion, id_mascota, id_veterinario)
+VALUES (NOW(), 'Consulta por alergias', 1, 1),
+       (NOW(), 'Revisión anual', 2, 2),
+       (NOW(), 'Vacunación', 3, 1);
 
 -- Ejercicio 7 – Actualizar registros
 -- Realizar las siguientes actualizaciones:
